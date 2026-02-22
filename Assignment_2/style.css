@@ -242,46 +242,82 @@ nav a:hover {
     }
 }
 
-/* ===============================
-   BUY NOW / CHECKOUT PAGE
-================================ */
+/* ========================= */
+/* Buy Now Page Styling */
+/* ========================= */
 
 .checkout-section {
     display: flex;
-    gap: 50px;
-    padding: 60px 80px;
-    background: #f9f9f9;
+    gap: 40px;
+    padding: 60px 10%;
+    background: #f4f7fb;
+    min-height: 80vh;
 }
 
-/* Billing Form */
+/* Billing Box */
 .billing-box {
     flex: 2;
     background: #ffffff;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .billing-box h2 {
     margin-bottom: 20px;
+    color: #1e293b;
 }
 
-.billing-box .input-group {
-    margin-bottom: 15px;
+/* Input Group */
+.input-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
-.billing-box input,
-.billing-box select {
-    width: 100%;
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.input-group input,
+.input-group select {
     padding: 10px;
+    border: 1px solid #cbd5e1;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    font-size: 14px;
 }
 
-.billing-box input:focus,
-.billing-box select:focus {
-    border-color: #ff6b00;
+.input-group input:focus,
+.input-group select:focus {
     outline: none;
+    border-color: #2563eb;
+}
+
+/* Button */
+.place-order {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.place-order:hover {
+    background: #1e40af;
+}
+
+/* Success Box */
+.success-box {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
 }
 
 /* Order Summary */
@@ -289,9 +325,8 @@ nav a:hover {
     flex: 1;
     background: #ffffff;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    height: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 .summary-box h3 {
@@ -302,34 +337,20 @@ nav a:hover {
     margin: 8px 0;
 }
 
-.total-price {
-    font-size: 20px;
+.summary-box hr {
+    margin: 15px 0;
+}
+
+.total {
     font-weight: bold;
-    color: #ff6b00;
-    margin-top: 15px;
-}
-
-/* Place Order Button */
-.place-order {
-    margin-top: 20px;
-    padding: 12px;
-    width: 100%;
-    border: none;
-    background: #ff6b00;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.place-order:hover {
-    background: #e65c00;
+    color: #2563eb;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-    .checkout-section {
+@media(max-width: 900px){
+    .checkout-section{
         flex-direction: column;
+        padding: 30px 5%;
     }
 }
 
